@@ -2,7 +2,7 @@
 
 #Scaping all MP3 files from the Gothic audio books at https://kg-voices.de
 #Author(s)		: Lukas Mirow
-#Date of creation	: 2023-09-0l
+#Date of creation	: 2023-09-01
 
 
 DOWNLOADER_EXECUTABLE = "yt-dlp"
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 	match = re_search.search(search_txt)
 	while match != None: #For each match
 		link = search_txt[match.start():match.end()]
-		#Ignore the "will come soon"-MP3
+		#Ignore the "will come soon"-MP3s
 		if not re_exclude.fullmatch(link):
 			#Ignore duplicates
 			if link not in links:
